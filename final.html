@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css">
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+    <style type="text/css">
+
+        body{
+            background: #ff3d9e;
+            background: linear-gradient(0deg, #f7e8ff 0%, #f7e8ff 100%);}
+        text {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+        path.line {
+            fill: none;
+            stroke: rgba(57, 179, 35, 0.99);
+            stroke-width: 3px;
+        }
+
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: darkslategray;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 1024px;
+        }
+
+        .svg-container {
+            margin: 20px auto;
+            max-width: 1128px;
+            height: 500px;
+
+        }
+        .links {
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            padding: .8em 1em calc(.8em + 3px);
+            border-radius: 5px;
+            background: #483D8B;
+            box-shadow: 0 -3px  #000066 inset;
+            transition: 0.2s;
+        }
+        .links:hover { background: #5a5097; }
+        .links:active {
+            background: #191975;
+            box-shadow: 0 3px #000066 inset;
+        }
+
+        .linksUn{
+            font-weight: 700;
+            color: black;
+            text-decoration: none;
+            padding: .8em 1em calc(.8em + 3px);
+            border-radius: 5px;
+            background: rgb(213, 239, 129);
+            transition: 0.2s;
+        }
+        h1
+        {
+            padding-top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Итоговая работа</h1>
+
+    <a class="links" href="bar-chart.html">Bar chart</a>
+    <a class="links" href="line-chart.html">Line chart</a>
+    <a class="links" href="lolipop-chart.html">Lolipop chart</a>
+    <a class="links" href="pie-chart.html">Pie chart</a>
+    <a class="links" href="treemap.html">Treemap</a>
+    <a class="links" href="final.html">Final</a>
+    <a class="links" href="index.html">Home</a>
+
+    <p>
+        <br>
+        Был выбран датасет с сайта Kaggle - сравнение фильмов Marvel и DC. Для удобства весь датасет представлен внизу страницы. Так как датасет не очень большой, описательная статистика не очень разнообразна, зато очень наглядна. Датасет представляет собой список всех фильмов компании Marvel и DC вместе с их следующими характеристиками: Название, компания-производитель, рейтинг, рейтинг на Metacritic, количество минут, год выпуска, бюджет, сборы за премьеру, сборы в США, сборы по всему миру. Основываясь на эти данные была проведена описательная статистика и построены различные графики. В процессе выполнения лабораторных работ были изучены различные инструменты, такие как Jupyter Notebook с использованием Pandas и NumPy, D3.js, работа с HTML и CSS, а также сервис Datawrapper. Ниже представленны графики сделанные с помощью сервиса Datawrapper.
+    </p>
+
+    <h2>Datawrapper</h2>
+
+    <p>
+        С помощью следующего графика можно легко сравнить все строки датасета по выбранному параметру. Красным цветом обозначены фильмы Marvel, а синим соответственно DC.
+    </p>
+    <p>
+        <iframe title="Sales around World" aria-label="chart" id="datawrapper-chart-Z0QeT" src="https://datawrapper.dwcdn.net/Z0QeT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="313"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+    </script>
+    </p>
+    <p>
+        Следующий график представляет соотношение бюджета и сборов каждого фильма. Сервис Datawrapper позволяет с легкостью наглядно представить данную информацию.
+    </p>
+    <p>
+        <iframe title="Sales around World" aria-label="chart" id="datawrapper-chart-xs2Rg" src="https://datawrapper.dwcdn.net/xs2Rg/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="313"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+    </script>
+    </p>
+
+    <p>
+        Далее представлен сам датасет, который также был представлен с помощью сервиса Datawrapper.
+    </p>
+    <p>
+        <iframe title="Game releases" aria-label="Interactive area chart" id="datawrapper-chart-9yXeq" src="https://datawrapper.dwcdn.net/9yXeq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+    </script>
+    </p>
+
+
+
+</div>
+</body>
+</html>
